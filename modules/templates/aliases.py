@@ -178,8 +178,8 @@ alias edbroot="cd /usr/share/exploitdb/platforms/"
 ## wordlist
 alias wordlists="cd /usr/share/wordlists/"
 
-## metasploit
-alias msfconsole="systemctl start postgresql; msfdb start; msfconsole \"\$@\""
+## HTB vpn
+alias htb="openvpn /home/res/copy_to_kali/Res.ovpn"
 
 """
 
