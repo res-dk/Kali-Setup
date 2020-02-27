@@ -9,12 +9,12 @@ import os
 class Config:
     DEFAULTS = {
         'general': {
-            'timezone': 'America/Chicago',
+            'timezone': 'Europe/Copenhagen',
             'update first': 'yes',
             'latest kernel': 'yes',
             '4k': 'no',
             'default shell': 'zsh',
-            'default desktop env': 'kde',
+            'default desktop env': 'gnome',
             'metapackage': 'large',
             'verbose': 'no',
             'modules': 'kali, vm, apt, git, github, vim, metasploit, samba, dbeaver, yed, ghidra, bash, aliases, zsh, ntp, firefox, cobaltstrike'
