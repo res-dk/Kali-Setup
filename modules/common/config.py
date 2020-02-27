@@ -17,7 +17,7 @@ class Config:
             'default desktop env': 'gnome',
             'metapackage': 'large',
             'verbose': 'no',
-            'modules': 'kali, vm, apt, git, github, vim, metasploit, samba, dbeaver, yed, ghidra, bash, aliases, zsh, ntp, firefox, cobaltstrike'
+            'modules': 'kali, vm, apt, git, github, vim, metasploit, samba, dbeaver, yed, ghidra, aliases, ntp, firefox'
         },
         'kali': {
             'bleeding edge repos': 'yes'
