@@ -16,6 +16,12 @@ class InstallerTemplate:
         "bash completion": ['bash-completion'],
         "compiling libraries": ['gcc', 'g++', 'gcc-multilib', 'make', 'automake', 'libc6', 'libc6-i386', 'libc6-i686', 'build-essential', 'dpkg-dev'],
         "tmux": ["tmux"],
+        "terminator": ["terminator"],
+        "nfs-common": ["nfs-common"],
+        "keepass2": ["keepass2"],
+        "knockd": ["knockd"],
+        "flameshot": ["flameshot"],
+        "gobuster": ["gobuster"],
         "ftp": ["ftp"],
         "exe2hex": ["exe2hexbat"],
         "msfpc": ["msfpc"],
@@ -58,6 +64,7 @@ class InstallerTemplate:
         "Updating IEEE oui list": ["airodump-ng-oui-update"],
         "Adding index to web server": ['echo "It works" > /var/www/html/index.html'],
         "Generating SSH key": ["sudo -E -u {0} ssh-keygen -b 4096 -t rsa -f ~/.ssh/id_rsa -P ''".format(get_user())],
+        "Unzipping RockYou": ["gunzip /usr/share/wordlists/rockyou.txt.gz 2>/dev/null"],
     }
 
     def check(self, config):
