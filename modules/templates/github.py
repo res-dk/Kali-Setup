@@ -51,53 +51,53 @@ class InstallerTemplate:
         'rofl0r/proxychains-ng',
         'scipag/vulscan',
         'rebootuser/LinEnum',
-	    'n00py/WPForce',
-	    '21y4d/nmapAutomator',
-	    'Tib3rius/AutoRecon',
-	    'LegendBegins/Overflow-Helper',
-	    'maurosoria/dirsearch',
-	    'linted/linuxprivchecker',
-	    'diego-treitos/linux-smart-enumeration',
-	    'PowerShellMafia/PowerSploit',
-	    'M4ximuss/Powerless',
-	    'epi052/recursive-gobuster',
-	    'TH3xACE/SUDO_KILLER',
-	    'hisxo/gitGraber',
-	    'chinarulezzz/pixload',
-	    'trustedsec/unicorn',
-	    'Anon-Exploiter/SUID3NUM',
-	    'samratashok/nishang',
-	    'PowerShellMafia/PowerSploit',
-	    'kurobeats/fimap',
-	    'mzet-/linux-exploit-suggester',
-	    'jondonas/linux-exploit-suggester-2',
-	    'flozz/p0wny-shell',
-	    'Wphackedhelp/php-webshells', 
-	    'r3motecontrol/Ghostpack-CompiledBinaries', 
-	    'besimorhino/powercat', 
-	    'carlospolop/privilege-escalation-awesome-scripts-suite', 
-	    'sc0tfree/updog', 
-	    'bitsadmin/wesng', 
+	'n00py/WPForce',
+	'21y4d/nmapAutomator',
+	'Tib3rius/AutoRecon',
+	'LegendBegins/Overflow-Helper',
+	'maurosoria/dirsearch',
+	'linted/linuxprivchecker',
+	'diego-treitos/linux-smart-enumeration',
+	'PowerShellMafia/PowerSploit',
+	'M4ximuss/Powerless',
+	'epi052/recursive-gobuster',
+	'TH3xACE/SUDO_KILLER',
+	'hisxo/gitGraber',
+	'chinarulezzz/pixload',
+	'trustedsec/unicorn',
+	'Anon-Exploiter/SUID3NUM',
+	'samratashok/nishang',
+	'PowerShellMafia/PowerSploit',
+	'kurobeats/fimap',
+	'mzet-/linux-exploit-suggester',
+	'jondonas/linux-exploit-suggester-2',
+	'flozz/p0wny-shell',
+	'Wphackedhelp/php-webshells', 
+	'r3motecontrol/Ghostpack-CompiledBinaries', 
+	'besimorhino/powercat', 
+	'carlospolop/privilege-escalation-awesome-scripts-suite', 
+	'sc0tfree/updog', 
+	'bitsadmin/wesng', 
     ]
 
     _ADDITIONAL_INSTRUCTIONS = {
-        'Raikia/CredNinja': ['ln -s /opt/raikia_credninja-git/CredNinja.py /usr/local/bin/credninja'],
+        'Raikia/CredNinja': ['ln -s /opt/credninja-git/CredNinja.py /usr/local/bin/credninja'],
         'maurosoria/dirsearch': ['ln -s /opt/dirsearch-git/dirsearch.py /usr/local/bin/dirsearch'], 
         'PowerShellEmpire/Empire': ['export STAGING_KEY=random; cd ./setup; bash ./install.sh'],
         'ChrisTruncer/EyeWitness': ['cd ./setup/; bash ./setup.sh'],
         'HarmJ0y/TrustVisualizer': ['pip install networkx'],
         'Tib3rius/AutoRecon': ['pip3 install -r /opt/autorecon-git/requirements.txt'],
-        'Raikia/Misc-scripts': ['ln -s /opt/raikia_misc-scripts-git/np.py /usr/local/bin/np'],
+        'Raikia/Misc-scripts': ['ln -s /opt/misc-scripts-git/np.py /usr/local/bin/np'],
         'chinarulezzz/pixload': ['apt -y -qq install libgd-perl libimage-exiftool-perl libstring-crc32-perl'],
         'rofl0r/proxychains-ng': [
-            'cd /opt/rofl0r_proxychains-ng-git/; git pull -q', 
-            'cd /opt/rofl0r_proxychains-ng-git/; make -s clean',
-            'cd /opt/rofl0r_proxychains-ng-git/; ./configure --prefix=/usr --sysconfdir=/etc',
-            'cd /opt/rofl0r_proxychains-ng-git/; make -s',
-            'cd /opt/rofl0r_proxychains-ng-git/; make -s install',
+            'cd /opt/proxychains-ng-git/; git pull -q', 
+            'cd /opt/proxychains-ng-git/; make -s clean',
+            'cd /opt/proxychains-ng-git/; ./configure --prefix=/usr --sysconfdir=/etc',
+            'cd /opt/proxychains-ng-git/; make -s',
+            'cd /opt/proxychains-ng-git/; make -s install',
             'ln -sf /usr/bin/proxychains4 /usr/local/bin/proxychains-ng'
         ],
-        'scipag/vulscan': ['ln -s /opt/scipag_vulscan-git /usr/share/nmap/scripts/vulnscan']
+        'scipag/vulscan': ['ln -s /opt/vulscan-git /usr/share/nmap/scripts/vulnscan']
     }
 
     def check(self, config):
@@ -106,7 +106,7 @@ class InstallerTemplate:
     def install(self, config):
         print_status("Installing various github tools into /opt", 1)
         for proj in self._REPOS:
-            print_status("Cloning {0}...".format(proj), 2)
+            print_status("Cloning {0}...".format(proj.split('/')[1]), 2)
             github_clone(proj, "/opt/")
             folder_name = "/opt/{0}-git".format(proj.split('/')[1].lower())
             run_command("cd {0}; git pull -q".format(folder_name))
