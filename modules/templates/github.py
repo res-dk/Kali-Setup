@@ -98,8 +98,8 @@ class InstallerTemplate:
             'cd /opt/proxychains-ng-git/; make -s install',
             'ln -sf /usr/bin/proxychains4 /usr/local/bin/proxychains-ng'
         ],
-        'scipag/vulscan': ['ln -s /opt/vulscan-git /usr/share/nmap/scripts/vulnscan']
-	'sensepost/ruler': ['ln -s /opt/ruler-git/bin/ruler /usr/local/bin/ruler'],
+        'scipag/vulscan': ['ln -s /opt/vulscan-git /usr/share/nmap/scripts/vulnscan'],
+	'sensepost/ruler': ['ln -s /opt/ruler-git/bin/ruler /usr/local/bin/ruler']
     }
 
     def check(self, config):
