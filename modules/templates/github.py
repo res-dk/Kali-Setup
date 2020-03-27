@@ -78,6 +78,7 @@ class InstallerTemplate:
 	'carlospolop/privilege-escalation-awesome-scripts-suite', 
 	'sc0tfree/updog', 
 	'bitsadmin/wesng', 
+	'sensepost/ruler',
     ]
 
     _ADDITIONAL_INSTRUCTIONS = {
@@ -98,6 +99,7 @@ class InstallerTemplate:
             'ln -sf /usr/bin/proxychains4 /usr/local/bin/proxychains-ng'
         ],
         'scipag/vulscan': ['ln -s /opt/vulscan-git /usr/share/nmap/scripts/vulnscan']
+	'sensepost/ruler': ['ln -s /opt/ruler-git/bin/ruler /usr/local/bin/ruler'],
     }
 
     def check(self, config):
