@@ -13,7 +13,7 @@ class Config:
             'update first': 'yes',
             'latest kernel': 'yes',
             '4k': 'no',
-            'default shell': 'zsh',
+            'default shell': 'bash',
             'default desktop env': 'gnome',
             'metapackage': 'large',
             'verbose': 'no',
