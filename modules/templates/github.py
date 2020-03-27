@@ -86,6 +86,7 @@ class InstallerTemplate:
         'maurosoria/dirsearch': ['ln -s /opt/dirsearch-git/dirsearch.py /usr/local/bin/dirsearch'], 
         'PowerShellEmpire/Empire': ['export STAGING_KEY=random; cd ./setup; bash ./install.sh'],
         'ChrisTruncer/EyeWitness': ['cd ./setup/; bash ./setup.sh'],
+	'Veil-Framework/Veil': ['./config/setup.sh --force --silent'],
         'HarmJ0y/TrustVisualizer': ['pip install networkx'],
         'Tib3rius/AutoRecon': ['pip3 install -r /opt/autorecon-git/requirements.txt'],
         'Raikia/Misc-scripts': ['ln -s /opt/misc-scripts-git/np.py /usr/local/bin/np'],
