@@ -19,6 +19,7 @@ class InstallerTemplate:
         "terminator": ["terminator"],
         "nfs-common": ["nfs-common"],
         "keepass2": ["keepass2"],
+        "powershell-empire": ["powershell-empire"],
         "knockd": ["knockd"],
         "flameshot": ["flameshot"],
         "gobuster": ["gobuster"],
