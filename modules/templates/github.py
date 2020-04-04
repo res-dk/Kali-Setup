@@ -8,7 +8,6 @@ class InstallerTemplate:
         'T-S-A/smbspider',
         'byt3bl33d3r/CrackMapExec',
         'gojhonny/CredCrack',
-        'PowerShellEmpire/Empire',
         'jekyc/wig',
         'Dionach/CMSmap',
         'droope/droopescan',
@@ -79,12 +78,13 @@ class InstallerTemplate:
 	'sc0tfree/updog', 
 	'bitsadmin/wesng', 
 	'sensepost/ruler',
+	'BC-SECURITY/Empire',
+	'Sw4mpf0x/PowerLurk',
     ]
 
     _ADDITIONAL_INSTRUCTIONS = {
         'Raikia/CredNinja': ['ln -s /opt/credninja-git/CredNinja.py /usr/local/bin/credninja'],
         'maurosoria/dirsearch': ['ln -s /opt/dirsearch-git/dirsearch.py /usr/local/bin/dirsearch'], 
-        'PowerShellEmpire/Empire': ['export STAGING_KEY=random; cd ./setup; bash ./install.sh'],
         'ChrisTruncer/EyeWitness': ['cd ./setup/; bash ./setup.sh'],
         'HarmJ0y/TrustVisualizer': ['pip install networkx'],
         'Tib3rius/AutoRecon': ['pip3 install -r /opt/autorecon-git/requirements.txt'],
