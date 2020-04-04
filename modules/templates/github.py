@@ -80,6 +80,7 @@ class InstallerTemplate:
 	'sensepost/ruler',
 	'BC-SECURITY/Empire',
 	'Sw4mpf0x/PowerLurk',
+	'SecureAuthCorp/impacket',
     ]
 
     _ADDITIONAL_INSTRUCTIONS = {
