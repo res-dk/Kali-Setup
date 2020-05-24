@@ -44,6 +44,7 @@ class InstallerTemplate:
         "FreeRDP": ["freerdp2-x11"],
         "xprobe": ["xprobe"],
         "p0f": ["p0f"],
+        "exiftool": ["exiftool"],
         "gdp-peda": ["gdb-peda"],
         "nbtscan": ["nbtscan"],
         "Apache, PHP, and MySQL": ["apache2", "php", "php-cli", "php-curl", "libapache2-mod-php", "default-mysql-server", "php-mysql"],
