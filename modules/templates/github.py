@@ -66,7 +66,6 @@ class InstallerTemplate:
 	'trustedsec/unicorn',
 	'Anon-Exploiter/SUID3NUM',
 	'samratashok/nishang',
-	'PowerShellMafia/PowerSploit',
 	'kurobeats/fimap',
 	'mzet-/linux-exploit-suggester',
 	'jondonas/linux-exploit-suggester-2',
