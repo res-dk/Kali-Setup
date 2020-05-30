@@ -52,6 +52,7 @@ class InstallerTemplate:
         "Firmware mod kit": ["firmware-mod-kit"],
         "Sublime Text 3": ["sublime-text"],
         "SSH Server": ["openssh-server"],
+        "python3-pip": ["python3-pip"],
         "bridge utils": ["bridge-utils"],
         "Mobile Tools": ["aapt", "abe", "adb", "apktool", "burp", "bytecode-viewer", "enjarify", "file", "gedit", "ideviceinstaller", "smali", "sqlite3"]
     }
