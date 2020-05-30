@@ -86,7 +86,7 @@ class InstallerTemplate:
     _ADDITIONAL_INSTRUCTIONS = {
         'Raikia/CredNinja': ['ln -s /opt/credninja-git/CredNinja.py /usr/local/bin/credninja'],
         'maurosoria/dirsearch': ['ln -s /opt/dirsearch-git/dirsearch.py /usr/local/bin/dirsearch'], 
-        'ChrisTruncer/EyeWitness': ['cd ./setup/; bash ./setup.sh'],
+        'ChrisTruncer/EyeWitness': ['cd ./Python/setup/; bash ./setup.sh'],
         'HarmJ0y/TrustVisualizer': ['pip3 install networkx'],
         'Tib3rius/AutoRecon': ['pip3 install -r /opt/autorecon-git/requirements.txt'],
         'Raikia/Misc-scripts': ['ln -s /opt/misc-scripts-git/np.py /usr/local/bin/np'],
