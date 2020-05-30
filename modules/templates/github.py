@@ -87,7 +87,7 @@ class InstallerTemplate:
         'Raikia/CredNinja': ['ln -s /opt/credninja-git/CredNinja.py /usr/local/bin/credninja'],
         'maurosoria/dirsearch': ['ln -s /opt/dirsearch-git/dirsearch.py /usr/local/bin/dirsearch'], 
         'ChrisTruncer/EyeWitness': ['cd ./setup/; bash ./setup.sh'],
-        'HarmJ0y/TrustVisualizer': ['pip install networkx'],
+        'HarmJ0y/TrustVisualizer': ['pip3 install networkx'],
         'Tib3rius/AutoRecon': ['pip3 install -r /opt/autorecon-git/requirements.txt'],
         'Raikia/Misc-scripts': ['ln -s /opt/misc-scripts-git/np.py /usr/local/bin/np'],
         'chinarulezzz/pixload': ['apt -y -qq install libgd-perl libimage-exiftool-perl libstring-crc32-perl'],
