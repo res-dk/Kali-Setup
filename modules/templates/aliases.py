@@ -165,7 +165,7 @@ alias ftproot="cd /var/ftp/"
 alias tftproot="cd /var/tftp/"
 
 ## smb
-alias smb="cd /var/samba/"
+#alias smb="cd /var/samba/"
 #alias smbroot="cd /var/samba/"
 
 ## vmware
@@ -180,6 +180,12 @@ alias wordlists="cd /usr/share/wordlists/"
 
 ## HTB vpn
 alias htb="openvpn /home/res/copy_to_kali/Res.ovpn"
+
+## python http
+alias smb="impacket-smbserver test"
+
+## THM vpn
+alias thm="openvpn /root/copy_to_kali/Tryhackme_vip_res.ovpn"
 
 """
 
