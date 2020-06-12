@@ -27,7 +27,7 @@ class InstallerTemplate:
         "exe2hex": ["exe2hexbat"],
         "msfpc": ["msfpc"],
         "gedit": ["gedit"],
-        "jd.gui": ["jd.gui"],
+        "PIP": ["python-pip"],
         "Go": ["golang"],
         "Libreoffice": ["libreoffice"],
         "CA certificates": ["ca-certificates"],
