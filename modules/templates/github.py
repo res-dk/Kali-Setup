@@ -40,6 +40,7 @@ class InstallerTemplate:
         'GreatSCT/GreatSCT',
         'AlessandroZ/LaZagne',
         'b-mueller/apkx',
+	'wetw0rk/malicious-wordpress-plugin',
         'nccgroup/demiguise',
         'gnuradio/gnuradio',
         'johndekroon/serializekiller',
