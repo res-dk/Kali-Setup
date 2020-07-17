@@ -42,6 +42,8 @@ class InstallerTemplate:
         "Wine": ["wine", "winetricks", "wine32"],
         "Wordlists": ["wordlists"],
         "FreeRDP": ["freerdp2-x11"],
+        "Remmina": ["remmina"],
+        "Alacarte": ["alacarte"],
         "xprobe": ["xprobe"],
         "p0f": ["p0f"],
         "exiftool": ["exiftool"],
