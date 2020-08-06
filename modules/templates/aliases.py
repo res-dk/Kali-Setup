@@ -49,6 +49,9 @@ alias tmuxr="tmux attach || tmux new"
 ## axel
 alias axel="axel -a"
 
+## Nmap -sC -sV scan
+alias scan="nmap -sC -sV -oA nmap"
+
 ## screen
 alias screen="screen -xRR"
 
