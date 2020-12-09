@@ -82,6 +82,7 @@ class InstallerTemplate:
 	'BC-SECURITY/Empire',
 	'Sw4mpf0x/PowerLurk',
 	'SecureAuthCorp/impacket',
+	'cddmp/enum4linux-ng',
     ]
 
     _ADDITIONAL_INSTRUCTIONS = {
