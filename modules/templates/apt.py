@@ -7,7 +7,7 @@ class InstallerTemplate:
     _REPOS_TO_ADD = {
 #        "mongodb-org-4.2": "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/4.2 main",
         "sublime-text": "deb https://download.sublimetext.com/ apt/stable/",
-        "MS Vscode": "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main",
+#        "MS Vscode": "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main",
     }
 
     _PACKAGES = {
@@ -65,14 +65,14 @@ class InstallerTemplate:
     _COMMANDS_BEFORE = {
 #        "Adding MongoDB repo key": ["wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -"],
         "Adding sublime repo key": ["wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -"],
-        "Adding MS repo key": ["curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -"],
+        "Adding MS repo key": ["apt install -y apt-transport-https | curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add - | echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list"],
         "Adding x86 repos": ["dpkg --add-architecture i386"],
     }
 
     _COMMANDS_AFTER = {
         "Updating IEEE oui list": ["airodump-ng-oui-update"],
         "Adding index to web server": ['echo "It works" > /var/www/html/index.html'],
-        "Generating SSH key": ["sudo -E -u {0} ssh-keygen -b 4096 -t rsa -f ~/.ssh/id_rsa -P ''".format(get_user())],
+        "Generating SSH key": ["ssh-keygen -b 4096 -t rsa -f ~/.ssh/id_rsa -P ''".format(get_user())],
         "Unzipping RockYou": ["gunzip /usr/share/wordlists/rockyou.txt.gz 2>/dev/null"],
     }
 
