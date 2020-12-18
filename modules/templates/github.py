@@ -83,6 +83,7 @@ class InstallerTemplate:
 	'Sw4mpf0x/PowerLurk',
 	'SecureAuthCorp/impacket',
 	'cddmp/enum4linux-ng',
+	'Flangvik/SharpCollection',    
     ]
 
     _ADDITIONAL_INSTRUCTIONS = {
