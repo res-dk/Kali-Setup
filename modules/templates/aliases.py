@@ -184,8 +184,9 @@ alias wordlists="cd /usr/share/wordlists/"
 ## HTB vpn
 alias htb="openvpn /home/res/copy_to_kali/Res.ovpn"
 
-## python http
+## SMB server
 alias smb="impacket-smbserver test"
+alias smb2="impacket-smbserver -smb2support test"
 
 ## THM vpn
 alias thm="openvpn /root/copy_to_kali/Tryhackme_vip_res.ovpn"
@@ -218,3 +219,4 @@ alias thm="openvpn /root/copy_to_kali/Tryhackme_vip_res.ovpn"
         file_replace('{0}/.bashrc'.format(get_home_folder()), '#alias', 'alias')
         file_replace('{0}/.aliases'.format(get_home_folder()), '#alias', 'alias')
         file_append_once('{0}/.bashrc'.format(get_home_folder()), "if [ -f ~/.aliases ]; then\n. ~/.aliases\nfi", '~/.aliases')
+        file_append_once('{0}/.zshrc'.format(get_home_folder()), "if [ -f ~/.aliases ]; then\n. ~/.aliases\nfi", '~/.aliases')
