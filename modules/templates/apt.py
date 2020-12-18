@@ -5,15 +5,16 @@ from modules.common.automation import *
 class InstallerTemplate:
 
     _REPOS_TO_ADD = {
-        "mongodb-org-4.2": "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/4.2 main",
+#        "mongodb-org-4.2": "deb http://repo.mongodb.org/apt/debian buster/mongodb-org/4.2 main",
         "sublime-text": "deb https://download.sublimetext.com/ apt/stable/",
+        "MS Vscode": "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main",
     }
 
     _PACKAGES = {
         "APT HTTPS": ["apt-transport-https"],
         "gnupg": ['gnupg'],
         "grc": ['grc'],
-        "bash completion": ['bash-completion'],
+#        "bash completion": ['bash-completion'],
         "compiling libraries": ['gcc', 'g++', 'gcc-multilib', 'make', 'automake', 'libc6', 'libc6-i386', 'libc6-i686', 'build-essential', 'dpkg-dev'],
         "tmux": ["tmux"],
         "terminator": ["terminator"],
@@ -28,6 +29,7 @@ class InstallerTemplate:
         "msfpc": ["msfpc"],
         "gedit": ["gedit"],
         "PIP": ["python-pip"],
+        "PIP3": ["python-pip3"],
         "Go": ["golang"],
         "Libreoffice": ["libreoffice"],
         "CA certificates": ["ca-certificates"],
@@ -36,7 +38,7 @@ class InstallerTemplate:
         "Aircrack suite": ["aircrack-ng curl"],
         "reaver": ["reaver", "pixiewps"],
         "redis": ["redis-tools"],
-        "MongoDB Tools": ["mongodb-org-tools"],
+#        "MongoDB Tools": ["mongodb-org-tools"],
         "nmap": ["nmap"],
         "MinGW": ["mingw-w64", "binutils-mingw-w64", "gcc-mingw-w64", "cmake", "mingw-w64-i686-dev", "mingw-w64-x86-64-dev", "mingw-w64-tools", "gcc-mingw-w64-i686", "gcc-mingw-w64-x86-64"],
         "Wine": ["wine", "winetricks", "wine32"],
@@ -56,12 +58,14 @@ class InstallerTemplate:
         "SSH Server": ["openssh-server"],
         "python3-pip": ["python3-pip"],
         "bridge utils": ["bridge-utils"],
+        "Vscode": ["code"],
         "Mobile Tools": ["aapt", "abe", "adb", "apktool", "burp", "bytecode-viewer", "enjarify", "file", "gedit", "ideviceinstaller", "smali", "sqlite3"]
     }
 
     _COMMANDS_BEFORE = {
-        "Adding MongoDB repo key": ["wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -"],
+#        "Adding MongoDB repo key": ["wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -"],
         "Adding sublime repo key": ["wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -"],
+        "Adding MS repo key": ["curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -"],
         "Adding x86 repos": ["dpkg --add-architecture i386"],
     }
 
