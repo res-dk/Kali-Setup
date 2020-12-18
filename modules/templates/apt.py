@@ -65,7 +65,7 @@ class InstallerTemplate:
     _COMMANDS_BEFORE = {
 #        "Adding MongoDB repo key": ["wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -"],
         "Adding sublime repo key": ["wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -"],
-        "Adding MS repo key": ["apt install -y apt-transport-https | curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add - | echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list"],
+        "Adding MS repo key": ["curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add - | echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list"],
         "Adding x86 repos": ["dpkg --add-architecture i386"],
     }
 
